@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+* {
+    font-family: 'Cormorant Garamond', sans-serif;
+}
+
+.contenu {
+    background-color: #edeef0;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+header h5, h1 {
+    text-transform: uppercase;
+}
+
+header h5 {
+    color: red;
+}
+
+header hr {
+    width:500px;
+}
+
+header img {
+    width: 450px;
+}
+
+#accueil {
+    display: flex;
+
+    .accueil {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .texte1 {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+        line-height: 2px;
+    }
+    
+    hr {
+        width: 400px;
+    }
+
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+.texte {
+    width: 50%;
+    height: 50%;
+
+    hr {
+        width: 400px;
+        bottom: 0;
+    }
+
+
+}
+
+.image {
+    width: 50%;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+#salle {
+    display: flex;
+
+    .salle {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
+}
+
+#service {
+    display: flex;
+    .service {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;      
+    }
+
+}
+
+#dressage {
+    display: flex;
+    .dressage {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
+  
+}
+
+#gout {
+    display: flex;
+    .gout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+
+    img {
+        width: 100px;
+        position: absolute;
+    }
+}
+
+footer .city-guide {
+    position: relative;
+    color: red;
+    font-size: 15px;
+    font-weight: 700px;
+    z-index: 2;
+}
+
+footer hr { width: 500px;}
+   
+footer hr, h2, h5, h4 {
+    line-height: 1px;
+}
+
+.note {
+    background-color: rgb(12, 12, 34);
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+
+    p {
+        color: white;
+    }
+}
+
