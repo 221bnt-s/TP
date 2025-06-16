@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 
+    ATTENTION !
+     
+  inline-size ⇨ équivalent logique de width
+
+  VSCode recommande d'utiliser `inline-size` à la place de `width`.
+
+  ✅ Similaire en apparence, mais :
+    - `width` est une propriété *physique* : elle définit toujours la largeur, 
+      quel que soit le sens de lecture.
+    - `inline-size` est une propriété *logique* : elle s’adapte automatiquement 
+      à la direction du texte (gauche → droite, droite → gauche, ou vertical).
+
+  🔁 Utile pour rendre les layouts plus flexibles et compatibles avec des langues 
+  comme l’arabe, l’hébreu ou le japonais (écritures RTL ou verticales).
+*/
+
+
+.container {
+    /* width à 50% de la taille du body + margin auto pour centrer le container */
+    inline-size: 50%;
+    margin: 0 auto;
+    font-family: "Cormorant", serif;
+    background-color: #edeef0;
+}
+
+/* Header */
+
+header {
+    inline-size: 50%;
+    margin: auto;
+    padding: 60px 0;
+    text-align: center;
+}
+
+header h3 {
+    /* Le H3 dans le header */
+    color: darkgoldenrod;
+    font-size: 1em;
+}
+
+h1 {
+    margin: 5px auto;
+    letter-spacing: 4px;
+    /* J'espace les lettre de tant de distance */
+    text-transform: uppercase;
+    /* Je rend le texte en majuscule */
+    border-block-start: 1px solid grey;
+    border-block-end: 1px solid grey;
+    inline-size: 80%;
+}
+
+header nav ul li {
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    /* je retire les points des listes */
+}
+
+header nav ul li {
+    display: inline-block;
+    /* Inline-block pour les rendre inline mais garder les propriétés width et height (même si non utilisées ici) */
+    font-style: italic;
+}
+
+
+/* Fin du header */
+
+
+/* Section assiete */
+
+#assiete {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    inline-size: 80%;
+    margin: auto;
+}
+
+#assiete>div:first-child {
+    inline-size: 90%;
+
+    img {
+        border-radius: 50%;
+        inline-size: 100%;
+    }
+}
+
+#assiete>div:last-child {
+    inline-size: 60%;
+    font-size: 17px;
+    text-align: end;
+    position: relative;
+    padding-block-start: 10px;
+
+    /* premier p dans la derniere div de la section */
+
+    p:first-child {
+        font-style: italic;
+        font-weight: bold;
+        border-block-end: 1px solid rgb(191, 189, 189);
+        position: absolute;
+        inset-inline-end: 0;
+        inset-block-start: -20px;
+        inline-size: 450px;
+    }
+
+    p:not(:first-child) {
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+}
+
+.maj {
+    text-transform: uppercase;
+}
+
+
+/* Fin section assiette */
+
+
+/* Section salle */
+
+#presentation>div {
+    display: flex;
+}
+
+/* On sépare les div qui contiennent l'image et la div qui contient le texte en part égales */
+#presentation>div>div {
+    flex-basis: 50%;
+}
+
+/* Les div pairs seront inversées (image ET texte au lieu de texte ET image) */
+#presentation>div:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Les images feront 100% de la div à 50% (sinon elles débordent un peu) */
+#presentation img {
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+/* Les divs textes */
+#presentation>div>div:first-child {
+    display: flex;
+    flex-direction: column;
+    /* Pour les centrer verticalement (Flex-direction est en column donc ça s'inverse) */
+    justify-content: center;
+    padding-inline-start: 30px;
+}
+
+#presentation>div>div:first-child>h2 {
+    border-block-end: 1px solid grey;
+    inline-size: 90%;
+    letter-spacing: 5px;
+    font-size: 2rem;
+    /* chaque lettre est espacée de 4px */
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#presentation>div>div:first-child>p {
+    inline-size: 80%;
+    font-size: 17px;
+    font-weight: bold;
+    word-spacing: 1px;
+    margin: 10px 0;
+}
+
+
+/* Le p des notes */
+
+#presentation>div>div:first-child>p:last-child {
+    background-color: black;
+    color: white;
+    padding: 5px 5px;
+    inline-size: 50%;
+}
+
+
+/* Fin de la section salle */
+
+
+/* footer */
+
+footer {
+/* Padding bottom pour allonger le footer vers le bas */
+    padding-block-end: 150px;
+
+    /* Width 50% + margin auto pour centrer */
+    margin: 50px auto;
+    inline-size: 50%;
+    text-align: center;
+    position: relative;
+}
+
+footer>div:first-child {
+    opacity: 0.1;
+}
+
+#city_map {
+    position: absolute;
+    inset-block-start: 16%;
+    inset-inline-start: 51%;
+    transform: translate(-50%, -70%);
+    font-size: 20px;
+    color: goldenrod;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer > div:last-child > h2 {
+    text-transform: uppercase;
+    border-block-start: 1px solid rgb(152, 150, 150);
+    border-block-end: 1px solid rgb(145, 144, 144);
+    font-size: 35px;
+    letter-spacing: 10px;
+}
+
+footer > div:last-child > p {
+    font-weight: bold;
+}
+
+footer > div:last-child > p:nth-child(3) {
+    margin-block-start: -5px;
+    margin-block-end: 5px;
+}

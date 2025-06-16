@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+
+/* Pour tout texte en majuscule */
+.uppercase {
+    text-transform: uppercase;
+}
+/* Pour les petits textes en rose */
+h5 {
+    color: rgb(238, 72, 108);
+}
+
+/* Container */
+#container {
+    margin: auto;
+    width: 1200px;
+}
+
+/* Header */
+header {
+    background-image: url(../img/planches.jpg);
+    background-size: contain;
+    height: 500px;
+    font-family: 'Caveat Brush';
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: -50px;
+    gap: 30px;
+}
+
+.cerf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    z-index: 1;
+    width: 200px;
+}
+
+#triangle {
+    width: 0;
+    height:0;
+    border-top: 150px solid rgb(238, 72, 108);
+    border-left: 150px solid transparent;
+    position: absolute;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+}
+/* Fin - header */
+
+/* Section */
+section div {
+    display: flex;
+}
+
+/* pour réduire les images des graines */
+#fare .texte, #distillation .texte  {
+    img {width: 100px;}
+}
+
+/* Pour le texte en général */
+.texte {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2, h5 {
+        font-family: 'Arial';
+    }
+
+    p {
+        font-size: small;
+    }
+}
+
+#rectangle {
+    width: 50px;
+    height:10px;
+    background-color: rgb(238, 72, 108);
+}
+
+/* Taille de chaque div */
+
+#our-story {
+    .our-story {
+        img {
+            width: 750px;
+            transform: scaleX(-1);
+        }
+    }
+}
+
+#fare {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .fare {
+        img {
+            width: 900px;
+        }
+    }
+}
+
+#distillation {
+    .distillation {
+        img {
+            width: 750px;
+        }
+    }
+}
+
+#oeuf {
+    img {
+        width: 1200px;
+    }
+}
+/* Fin - section */
+
+/* Footer */
+footer {
+    background-image: url(../img/motif.jpg);
+    padding: 80px;
+}
+
+footer p {
+    font-size: small;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial';
+}
+
+.info h2 {
+    font-family: 'Caveat Brush';
+}
+
+/* Pour les icônes des réseaux sociaux */
+i {
+    color: rgb(238, 72, 108);
+    font-size: 25px;
+}
+/* Fin - footer */

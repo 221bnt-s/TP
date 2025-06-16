@@ -4,6 +4,7 @@
     font-family: 'Cormorant Garamond', sans-serif;
 }
 
+/* Contenu */
 .contenu {
     background-color: #edeef0;
     width: 50%;
@@ -11,7 +12,7 @@
     display: flex;
     flex-direction: column;
 }
-
+/* Header */
 header {
     text-align: center;
 }
@@ -32,6 +33,7 @@ header img {
     width: 450px;
 }
 
+/* Section d'accueil dans le header */
 #accueil {
     display: flex;
 
@@ -41,6 +43,7 @@ header img {
         align-items: center;
     }
     
+    /* Texte d'accueil */
     .texte1 {
         width: 400px;
         height: 400px;
@@ -58,11 +61,12 @@ header img {
 
 }
 
+/* Pour tout texte étant en majuscule */
 .uppercase {
     text-transform: uppercase;
 }
 
-
+/* Pour les textes des sections */
 .texte {
     width: 50%;
     height: 50%;
@@ -71,10 +75,9 @@ header img {
         width: 400px;
         bottom: 0;
     }
-
-
 }
 
+/* Pour les images des sections */
 .image {
     width: 50%;
 
@@ -83,7 +86,7 @@ header img {
         width: 100%;
     }
 }
-
+/* Pour chaque section */
 #salle {
     display: flex;
 
@@ -132,7 +135,7 @@ header img {
 }
 
 
-
+/* Footer */
 footer {
     display: flex;
     flex-direction: column;
@@ -159,6 +162,7 @@ footer hr, h2, h5, h4 {
     line-height: 1px;
 }
 
+/* Pour les notes */
 .note {
     background-color: rgb(12, 12, 34);
     width: 200px;
@@ -172,3 +176,4 @@ footer hr, h2, h5, h4 {
     }
 }
 
+/* Fin */
